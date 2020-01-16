@@ -1,6 +1,12 @@
 {
   "name": "torann/laravel-meta-tags",
-  "keywords": ["meta tags", "meta", "tags", "head", "laravel"],
+  "keywords": [
+    "meta tags",
+    "meta",
+    "tags",
+    "head",
+    "laravel"
+  ],
   "description": "A package to manage Header Meta Tags",
   "license": "MIT",
   "authors": [
@@ -24,6 +30,16 @@
   "autoload": {
     "psr-4": {
       "Torann\\LaravelMetaTags\\": "src/Torann/LaravelMetaTags/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Torann\\LaravelMetaTags\\MetaTagsServiceProvider"
+      ],
+      "aliases": {
+        "MetaTag": "Torann\\LaravelMetaTags\\Facades\\MetaTag"
+      }
     }
   }
 }
